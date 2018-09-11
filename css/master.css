@@ -1,0 +1,98 @@
+html,body { 
+margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
+}
+
+.wrapper{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background: url(../images/background.jpg) no-repeat center center fixed; 
+	background-size: cover;
+	display: table;
+	top: 0;
+	font-family: 'Helvetica Neue', Century Gothic;
+}
+
+.prof-box {
+	padding-top: 10px;
+	vertical-align: middle;
+	width: 370px;
+	height: 410px;
+	background: rgba(0,0,0,0.6);
+	color: white;
+	margin: auto;
+	margin-top: 100px;
+	border-radius: 10%;
+	box-shadow: 0 4px 4px rgba(0,0,0,0.9);
+	text-align: center;
+}
+
+.prof-pic {
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+
+
+.prof-box h1 {
+	font-weight: 100;
+}
+
+.prof-box h5 {
+	font-weight: 100;
+}
+
+.line-break1 {
+	width: 295px;
+	margin: 0 auto;
+	border-top: 1px solid white;
+}
+
+
+.social-icons {
+	font-size: 20px;
+}
+
+.social-icons a {
+	color: white;
+}
+
+.social-icons ul{
+padding: 0px;
+}
+
+.social-icons ul li{
+	display: inline;
+	list-style-type: none;
+}
+
+.social-icons ul li i.fa{
+	margin-top: -10px;
+	width: 50px;
+	height: 50px;
+	padding: 0px;
+	line-height: 50px;
+	font-size: 30px;
+	border-radius: 50%;
+	border: 2px solid #ffffff;
+	text-align: center;
+	margin-left: 5px;
+	transition: .5s;
+}
+
+.social-icons ul li i.fa:hover{
+	background: #000000;
+	color: white;
+}
+
+.bottom{
+	position: fixed;
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+}
+
+
