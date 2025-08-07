@@ -1,12 +1,14 @@
 /* CSS Custom Properties (Variables) */
 :root {
 	--primary-color: #ffffff;
-	--secondary-color: #000000;
+	--secondary-color: #0b0b0d;
+    --accent-color: rgb(247, 215, 130);
+    --accent-rgb: 247, 215, 130;
 	--background-overlay: rgba(0, 0, 0, 0.6);
 	--box-shadow: 0 4px 4px rgba(0,0,0,0.9);
 	--border-radius: 10%;
 	--transition-duration: 0.5s;
-	--font-family: 'Helvetica Neue', Century Gothic, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family: 'Helvetica Neue', Century Gothic, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	--font-weight-light: 100;
 	--font-weight-normal: 400;
 	--font-weight-bold: 700;
@@ -25,16 +27,16 @@
 }
 
 html {
-	font-size: 16px;
-	scroll-behavior: smooth;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-	font-family: var(--font-family);
-	line-height: 1.6;
-	color: var(--primary-color);
-	background-color: var(--secondary-color);
-	overflow-x: hidden;
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
 }
 
 /* Accessibility Improvements */
@@ -75,66 +77,67 @@ button:focus-visible {
 
 /* Main Layout */
 .wrapper {
-	min-height: 100vh;
-	width: 100%;
-	margin: 0 auto;
-	background: url(../images/background.jpg) no-repeat center center fixed;
-	background-size: cover;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: relative;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    background: url(../images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 /* Profile Box */
 .prof-box {
-	padding: var(--spacing-sm) var(--spacing-md);
-	width: 370px;
-	min-height: 410px;
-	background: var(--background-overlay);
-	color: var(--primary-color);
-	border-radius: var(--border-radius);
-	box-shadow: var(--box-shadow);
-	text-align: center;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+    padding: var(--spacing-sm) var(--spacing-md);
+    width: 380px;
+    min-height: 420px;
+    background: linear-gradient(180deg, rgba(20,20,22,0.9), rgba(10,10,12,0.8));
+    color: var(--primary-color);
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.05);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease, border-color var(--transition-duration) ease;
 }
 
 .prof-box:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.55);
 }
 
 /* Profile Image */
 .prof-pic {
-	border-radius: 50%;
-	height: 200px;
-	width: 200px;
-	object-fit: cover;
-	border: 3px solid var(--primary-color);
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-	transition: transform var(--transition-duration) ease;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
 }
 
 .prof-pic:hover {
-	transform: scale(1.05);
+    transform: scale(1.04);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6);
 }
 
 /* Typography */
 .prof-box h1 {
-	font-weight: var(--font-weight-light);
-	font-size: 2.5rem;
-	margin: var(--spacing-sm) 0;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: var(--font-weight-light);
+    font-size: 2.5rem;
+    margin: var(--spacing-sm) 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .prof-box h2 {
-	font-weight: var(--font-weight-light);
-	font-size: 1.2rem;
-	margin-bottom: var(--spacing-sm);
-	opacity: 0.9;
+    font-weight: var(--font-weight-light);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.9;
 }
 
 .education {
@@ -170,7 +173,7 @@ button:focus-visible {
 }
 
 .social-icons a {
-	color: var(--primary-color);
+    color: var(--primary-color);
 	text-decoration: none;
 	display: flex;
 	align-items: center;
@@ -178,41 +181,36 @@ button:focus-visible {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	border: 2px solid var(--primary-color);
-	transition: all var(--transition-duration) ease;
+    border: 2px solid rgba(255,255,255,0.6);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease, color var(--transition-duration) ease, background-color var(--transition-duration) ease;
 	position: relative;
 	overflow: hidden;
 }
 
+/* subtle glow on hover */
 .social-icons a::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background: var(--primary-color);
-	transition: left var(--transition-duration) ease;
-	z-index: -1;
-}
-
-.social-icons a:hover::before {
-	left: 0;
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(var(--accent-rgb), 0.0);
+    transition: box-shadow var(--transition-duration) ease;
 }
 
 .social-icons a:hover {
-	color: var(--secondary-color);
-	transform: translateY(-3px);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(var(--accent-rgb), 0.25);
+    background-color: rgba(255,255,255,0.06);
 }
 
 .social-icons i {
-	font-size: 1.5rem;
-	transition: transform var(--transition-duration) ease;
+    font-size: 1.5rem;
+    transition: transform var(--transition-duration) ease;
 }
 
 .social-icons a:hover i {
-	transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 /* Footer */
