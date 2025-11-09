@@ -267,8 +267,8 @@
   function updateScore() {
     const score = Math.floor(player.row);
     scoreEl.textContent = score;
-    const best = Math.max(score, parseInt(localStorage.getItem('dollus_dungeon_escape_best') || '0'));
-    localStorage.setItem('dollus_dungeon_escape_best', best.toString());
+    const best = Math.max(score, parseInt(localStorage.getItem('dungeon_escape_best') || '0'));
+    localStorage.setItem('dungeon_escape_best', best.toString());
     bestEl.textContent = best;
   }
 
